@@ -1,0 +1,23 @@
+{
+  "name": "tarrif-comparison",
+  "version": "1.0.0",
+  "description": "Tarrif Comparison",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sesanchit/tarrif-comparison.git"
+  },
+  "author": "Sanchit Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sesanchit/tarrif-comparison/issues"
+  },
+  "homepage": "https://github.com/sesanchit/tarrif-comparison#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
