@@ -1,8 +1,6 @@
 # tarrif-comparison
 Tarrif Comparison
 
-# REST API
-
 ## Features
 
 - Express
@@ -19,6 +17,9 @@ Tarrif Comparison
 - `cd tarrif-comparison`
 - `npm install`
 - `npm run start`
+
+## TEST
+- `npm run test`
 
 ### GET Routes
 
