@@ -49,6 +49,6 @@ app.use((error, req, res, next) => {
   });
 });
 
-app.listen(port, () => {
+module.exports = app.listen(port, () => {
   console.log(`Server started - listening at http://localhost:${port}`);
 });
