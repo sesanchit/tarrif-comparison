@@ -22,5 +22,8 @@ Tarrif Comparison
 
 ### GET Routes
 
-- visit http://localhost:3000
-  - /products?consumption=3500
+Visit
+
+#### http://localhost:3000 - Execute via Swagger
+  or
+#### http://localhost:3000/products?consumption=3500
