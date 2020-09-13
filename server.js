@@ -13,7 +13,7 @@ const options = {
       }
     ]
   },
-  apis: ['./api/routes/*.js']
+  apis: ['./src/api/routes/*.js']
 };
 const specs = swaggerJsdoc(options);
 app.use("/", swaggerUi.serve);
@@ -24,14 +24,14 @@ app.get(
   })
 );
 
-const queryParmasCaseInsensitive = require('./api/helpers/queryParmasCaseInsensitive');
+const queryParmasCaseInsensitive = require('./src/api/helpers/queryParmasCaseInsensitive');
 app.use(queryParmasCaseInsensitive);
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-const productRoutes = require('./api/routes/product');
+const productRoutes = require('./src/api/routes/product');
 app.use('/products', productRoutes);
 
 app.use((req, res, next) => {
