@@ -9,7 +9,7 @@ exports.products_get_all = (req, res, next) => {
         res.status(200).json(productList);
     }
     else {
-        const error = new Error('Bad request');
+        const error = new Error('Bad request. Consumption value must be greater than 0');
         error.status = 400;
         next(error);
     }
