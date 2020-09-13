@@ -26,7 +26,11 @@ app.get(
 
 const queryParmasCaseInsensitive = require('./api/helpers/queryParmasCaseInsensitive');
 app.use(queryParmasCaseInsensitive);
-
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 const productRoutes = require('./api/routes/product');
 app.use('/products', productRoutes);
 
