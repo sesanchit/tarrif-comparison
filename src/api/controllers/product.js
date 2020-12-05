@@ -19,17 +19,18 @@ function populateProducts(consumption){
     let productList = [];
     Products.forEach(product => {
         let productObj = {
-            "Tarrif Name": product.name,
-            "Annual costs (€/year)": 0
+            "tarrifName": product.name,
+            "annualCosts": 0,
+            "units": "(€/year)"
         };
         if (product.unitCap > 0) {
-            productObj["Annual costs (€/year)"] = product.baseAnnualCost;
+            productObj["annualCosts"] = product.baseAnnualCost;
             if (consumption > product.unitCap) {
-                productObj["Annual costs (€/year)"] += (consumption - product.unitCap) * product.additionalCost;
+                productObj["annualCosts"] += (consumption - product.unitCap) * product.additionalCost;
             }
         }
         else {
-            productObj["Annual costs (€/year)"] = product.baseAnnualCost + product.additionalCost * consumption;
+            productObj["annualCosts"] = product.baseAnnualCost + product.additionalCost * consumption;
         }
         productList.push(productObj);
     });
